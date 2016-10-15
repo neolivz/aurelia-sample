@@ -1,0 +1,32 @@
+{
+  "name": "aurelia-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neolivz/aurelia-sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neolivz/aurelia-sample/issues"
+  },
+  "homepage": "https://github.com/neolivz/aurelia-sample#readme",
+  "dependencies": {
+    "jspm": "^0.16.46"
+  },
+  "jspm": {
+    "dependencies": {
+      "aurelia-framework": "npm:aurelia-framework@^1.0.7"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
