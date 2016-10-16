@@ -1,12 +1,12 @@
 import {inject} from 'aurelia-framework';
-import {TweetService} from 'twitter/TweetService';
+import {TweetService} from 'services/TweetService';
 import {ArrayStore} from  'common/ArrayStore';
 
 @inject(TweetService, ArrayStore, 'currentUser')
 export class Tweets {
   constructor(tweetService, arrayStore, currentUser) {
     this.message = `Happy ${currentUser.getAge()}th Birthday, ${currentUser.getName()}`;
-    this.tweetsStore = arrayStore.replaceStore(tweetService.getTweets());
+    tweetService.getTweets().then(tweets => this.tweetsStore = arrayStore.replaceStore(tweets.statuses));
     console.log(this.tweetsStore);
   }
 }

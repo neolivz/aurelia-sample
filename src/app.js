@@ -7,8 +7,9 @@ export class App {
     this.router = router;
     config.title = 'Tweets';
     config.map([
-      { route: '', moduleId:'twitter/tweets'},
-      { route: 'users', moduleId:'users/users'},
+      { route: '', moduleId: 'twitter/tweets', title: 'Tweets', nav: true },
+      { route: 'users', moduleId: 'users/users' },
+      { route: 'dashboard', moduleId: 'dashboard/dashboard', title: 'Dashboard', nav: true },
     ])
   }
 }
