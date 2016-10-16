@@ -2,6 +2,9 @@
   Users
   ${message}
   <input type="text" value.bind="message">
+  <div class="">
+    Welcome ${currentUser.getName()}
+  </div>
   <div repeat.for="user of usersStore.getEntries()">
     ${user.name}
   </div>
