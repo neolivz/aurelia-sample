@@ -5,6 +5,9 @@
   <div class="">
     Welcome ${currentUser.getName()}
   </div>
+  <div class="">
+    <button type="button" click.trigger="getUsers()">Get Users</button>
+  </div>
   <div repeat.for="user of usersStore.getEntries()">
     ${user.name}
   </div>

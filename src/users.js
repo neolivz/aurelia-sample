@@ -1,11 +1,16 @@
-import {inject} from 'aurelia-framework';
+import {inject, Lazy} from 'aurelia-framework';
 import {TweetService} from 'TweetService';
 import {ArrayStore} from 'ArrayStore';
 
-@inject(TweetService, ArrayStore, 'currentUser')
+@inject(Lazy.of(TweetService), Lazy.of(ArrayStore), 'currentUser')
 export class Users {
   constructor(tweetService, arrayStore, currentUser) {
-    this.usersStore = arrayStore.replaceStore(tweetService.getUsers());
+    this.tweetService = tweetService;
+    this.arrayStore = arrayStore;
     this.currentUser = currentUser;
+  }
+
+  getUsers(){
+      this.usersStore = this.arrayStore().replaceStore(this.tweetService().getUsers());
   }
 }
