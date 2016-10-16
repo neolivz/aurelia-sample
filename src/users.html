@@ -2,4 +2,7 @@
   Users
   ${message}
   <input type="text" value.bind="message">
+  <div repeat.for="user of users">
+    ${user.name}
+  </div>
 </template>

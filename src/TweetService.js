@@ -5,7 +5,11 @@ export class TweetService {
       {id:2, message:"Welcome To Aurelia!!"},
       {id:3, message:"Aurelia Service!!"},
     ];
-    this.users = [];
+    this.users = [
+      {id:1, name:'Jishnu Viswanath'},
+      {id:2, name:'Vishnu Viswanath'},
+      {id:3, name:'Ishyani Mohan'},
+    ];
   }
 
   getTweets(){
