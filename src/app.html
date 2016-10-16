@@ -1,12 +1,12 @@
 <template>
-  <div>${message}</div>
-  <div>
-    <img src.bind="logo" alt="" />
-  </div>
-  <div class="">
-    <input type="text" value.bind="input">
-  </div>
-  <div class="">
-    ${input}
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <compose view="navbar.html"></compose>
+  <div class="container-fluid">
+    <div class="col-xs-10">
+      <compose view-model="tweets"></compose>
+    </div>
+    <div class="col-xs-2">
+      <compose view-model="users"></compose>
+    </div>
   </div>
 </template>
