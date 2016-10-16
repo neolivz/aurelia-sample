@@ -1,9 +1,10 @@
+import {TweetService} from 'TweetService';
+import {inject} from 'aurelia-framework';
+
+@inject(TweetService)
 export class Tweets {
-  constructor() {
+  constructor(tweetService) {
     this.message = "Tweets Come Here";
-    this.tweets = [
-      {id:1, message:"Welcome To Twitter!!"},
-      {id:2, message:"Welcome To Aurelia!!"},
-    ]
+    this.tweets = tweetService.getTweets();
   }
 }
