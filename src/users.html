@@ -7,6 +7,10 @@
   </div>
   <div class="">
     <button type="button" click.trigger="getUsers()">Get Users</button>
+    <button type="button" click.trigger="share()">Share</button>
+    <div repeat.for="plugin of sharePlugins">
+      ${plugin.pluginName} - ${plugin.shared}
+    </div>
   </div>
   <div repeat.for="user of usersStore.getEntries()">
     ${user.name}
