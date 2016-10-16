@@ -1,6 +1,6 @@
 import {inject, Lazy, All} from 'aurelia-framework';
-import {TweetService} from 'TweetService';
-import {ArrayStore} from 'ArrayStore';
+import {TweetService} from 'twitter/TweetService';
+import {ArrayStore} from 'common/ArrayStore';
 
 @inject(Lazy.of(TweetService), Lazy.of(ArrayStore), All.of('SharePlugins'), 'currentUser')
 export class Users {

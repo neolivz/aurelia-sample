@@ -3,6 +3,6 @@
   ${message}
   <input type="text" value.bind="message">
   <div repeat.for="tweet of tweetsStore.getEntries()">
-    <compose model.bind="tweet" view-model="tweet"></compose>
+    <compose model.bind="tweet" view-model="twitter/tweet"></compose>
   </div>
 </template>

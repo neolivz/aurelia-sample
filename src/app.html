@@ -1,12 +1,12 @@
 <template>
   <require from="bootstrap/css/bootstrap.css"></require>
-  <compose view="navbar.html"></compose>
+  <compose view="common/navbar.html"></compose>
   <div class="container-fluid">
     <div class="col-xs-10">
-      <compose view-model="tweets"></compose>
+        <router-view></router-view>
     </div>
     <div class="col-xs-2">
-      <compose view-model="users"></compose>
+      <compose view-model="users/users"></compose>
     </div>
   </div>
 </template>

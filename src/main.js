@@ -1,10 +1,10 @@
 import {LogManager} from 'aurelia-framework';
 import {ConsoleAppender} from 'aurelia-logging-console';
 import 'bootstrap';
-import {UserInfo} from 'UserInfo';
-import {FacebookPlugin} from 'FacebookPlugin';
-import {TwitterPlugin} from 'TwitterPlugin';
-import {GPlusPlugin} from 'GPlusPlugin';
+import {UserInfo} from 'common/UserInfo';
+import {FacebookPlugin} from 'share/FacebookPlugin';
+import {TwitterPlugin} from 'share/TwitterPlugin';
+import {GPlusPlugin} from 'share/GPlusPlugin';
 
 LogManager.addAppender(new ConsoleAppender());
 LogManager.setLevel(LogManager.logLevel.debug);

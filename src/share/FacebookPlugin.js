@@ -1,4 +1,4 @@
-import {SharePlugin} from 'SharePlugin';
+import {SharePlugin} from 'share/SharePlugin';
 export class FacebookPlugin extends SharePlugin {
   constructor() {
     super();

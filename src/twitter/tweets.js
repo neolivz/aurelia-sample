@@ -1,6 +1,6 @@
 import {inject} from 'aurelia-framework';
-import {TweetService} from 'TweetService';
-import {ArrayStore} from  'ArrayStore';
+import {TweetService} from 'twitter/TweetService';
+import {ArrayStore} from  'common/ArrayStore';
 
 @inject(TweetService, ArrayStore, 'currentUser')
 export class Tweets {
