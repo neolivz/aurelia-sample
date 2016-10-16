@@ -1,10 +1,12 @@
-import {TweetService} from 'TweetService';
 import {inject} from 'aurelia-framework';
+import {TweetService} from 'TweetService';
+import {ArrayStore} from  'ArrayStore';
 
-@inject(TweetService)
+@inject(TweetService, ArrayStore)
 export class Tweets {
-  constructor(tweetService) {
+  constructor(tweetService, arrayStore) {
     this.message = "Tweets Come Here";
-    this.tweets = tweetService.getTweets();
+    this.tweetsStore = arrayStore.replaceStore(tweetService.getTweets());
+    console.log(this.tweetsStore);
   }
 }

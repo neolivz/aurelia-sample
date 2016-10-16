@@ -2,7 +2,7 @@
   Users
   ${message}
   <input type="text" value.bind="message">
-  <div repeat.for="user of users">
+  <div repeat.for="user of usersStore.getEntries()">
     ${user.name}
   </div>
 </template>
