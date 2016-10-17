@@ -7,11 +7,15 @@ import {ArrayStore} from  'common/ArrayStore';
 export class Tweets {
   constructor(router, tweetService, arrayStore, currentUser) {
     this.router = router;
-    this.message = `Happy ${currentUser.getAge()}th Birthday, ${currentUser.getName()}`;
-    tweetService.getTweets().then(
-      tweets => this.tweetsStore = arrayStore.replaceStore(tweets.statuses)
+    this.tweetService = tweetService;
+    this.arrayStore = arrayStore;
+    this.currentUser = currentUser;
+  }
+  activate(){
+    this.message = `Happy ${this.currentUser.getAge()}th Birthday, ${this.currentUser.getName()}`;
+    return this.tweetService.getTweets().then(
+      tweets => this.tweetsStore = this.arrayStore.replaceStore(tweets.statuses)
     );
-    console.log(this.tweetsStore);
   }
   generateRoute(id){
     return this.router.generate('tweetDetail', {tweetId:  id});
